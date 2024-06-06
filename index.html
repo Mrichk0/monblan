@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+    />
+    <meta
+      name="keywords"
+      content="Monblan, images, memory, high-quality content"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+    <title>Monblan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="#">
+          <svg class="header__logo" aria-label="Logo">
+            <use xlink:href="./images/symbol-defs.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <div class="header__content">
+          <div class="header__info">
+            <h2 class="header__title">monblanproject</h2>
+            <button class="header__button" aria-label="Start date">
+              Start on 17-02-2016
+            </button>
+          </div>
+          <ul class="header__stats">
+            <li class="header__stat">
+              870 <span class="header__stat-label">posts</span>
+            </li>
+            <li class="header__stat">
+              11,787 <span class="header__stat-label">followers</span>
+            </li>
+            <li class="header__stat">
+              112 <span class="header__stat-label">following</span>
+            </li>
+          </ul>
+          <form class="datepicker__container">
+            <h3 class="datepicker__title">Date</h3>
+            <div class="datapicker__group">
+              <div
+                class="input-group input-group-right date"
+                id="dateFromContainer"
+              >
+                <input
+                  type="text"
+                  class="form-control datepicker__input"
+                  id="dateFrom"
+                  placeholder="from"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="clearDateFrom">
+                    <i class="fas fa-times"></i>
+                  </span>
+                  <span class="input-group-text">
+                    <i class="fas fa-calendar-alt"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="datapicker__group">
+              <div class="input-group date" id="dateToContainer">
+                <input
+                  type="text"
+                  class="form-control datepicker__input"
+                  id="dateTo"
+                  placeholder="to"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text" id="clearDateTo">
+                    <i class="fas fa-times"></i>
+                  </span>
+                  <span class="input-group-text">
+                    <i class="fas fa-calendar-alt"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h1 class="visually-hidden">Monblan</h1>
+        <svg class="main__icon main__icon--top">
+          <defs>
+            <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop
+                offset="8.03%"
+                style="stop-color: #40af79; stop-opacity: 1"
+              />
+              <stop
+                offset="90.34%"
+                style="stop-color: #124757; stop-opacity: 1"
+              />
+            </linearGradient>
+          </defs>
+          <use
+            href="./images/symbol-defs.svg#icon-decor-top"
+            fill="url(#myGradient)"
+          ></use>
+        </svg>
+        <svg class="main__icon main__icon--bottom" width="314" height="367">
+          <defs>
+            <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop
+                offset="8.03%"
+                style="stop-color: #40af79; stop-opacity: 1"
+              />
+              <stop
+                offset="90.34%"
+                style="stop-color: #124757; stop-opacity: 1"
+              />
+            </linearGradient>
+          </defs>
+          <use
+            href="./images/symbol-defs.svg#icon-decor-bottom"
+            fill="url(#myGradient)"
+          ></use>
+        </svg>
+
+        <section class="posts">
+          <ul class="posts__view">
+            <li class="posts__view-item">
+              <button class="posts__view-btn">
+                <svg class="posts__view-icon actve" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-grid"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="posts__view-item">
+              <button class="posts__view-btn">
+                <svg class="posts__view-icon" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-list"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+
+          <ul class="posts__list">
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+            <li class="posts__item">
+              <article class="posts__content">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/gallery/woman1x.webp 1x,
+                      ./images/gallery/woman2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/gallery/womanx1.jpg 1x,
+                      ./images/gallery/womanx2.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/gallery/womanx1.jpg  "
+                    loading="lazy"
+                    alt="woman in black head"
+                  />
+                </picture>
+                <div class="posts__info">
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">Today</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">128</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">31</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__date-section">
+                    <h3 class="posts__day">9-08-2016</h3>
+                    <div class="posts__icons-wrapper">
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use href="./images/symbol-defs.svg#icon-like"></use>
+                        </svg>
+                        <span class="posts__likes">67</span>
+                      </div>
+                      <div class="posts__icon-wrapper">
+                        <svg class="posts__icon" width="24" height="24">
+                          <use
+                            href="./images/symbol-defs.svg#icon-comment"
+                          ></use>
+                        </svg>
+                        <span class="posts__likes">22</span>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="posts__upload-section">
+                    <h3 class="posts__day">Image upload</h3>
+                    <time class="posts__time" datetime="2016-04-11"
+                      >11-04-2016</time
+                    >
+                  </section>
+                </div>
+              </article>
+            </li>
+          </ul>
+
+          <button class="posts__button">Load more</button>
+        </section>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="./js/datapicker.js"></script>
+  </body>
+</html>

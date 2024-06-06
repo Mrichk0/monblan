@@ -1,0 +1,37 @@
+body {
+  background-color: #fafafa;
+  color: var(--text-primary-color);
+
+  font-family: Roboto, Montserrat;
+  font-size: 14px;
+  line-height: normal;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+
+ul,
+ol {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

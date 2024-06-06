@@ -1,0 +1,58 @@
+.datepicker {
+  &__container {
+    @include tablet {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__title {
+    @include mobile-max {
+      display: none;
+    }
+    margin-right: 6px;
+    letter-spacing: -0.24px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__input {
+    height: 24px;
+    &::placeholder {
+      color: #636264;
+
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+}
+
+.input-group-text {
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group {
+  width: 202px;
+  @include tablet {
+    width: 162px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.input-group-right {
+  @include mobile-max {
+    margin-bottom: 10px;
+  }
+  @include tablet {
+    margin-right: 24px;
+  }
+}
